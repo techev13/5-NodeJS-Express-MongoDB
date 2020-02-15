@@ -8,7 +8,7 @@ MongoClient.connect(url, { useUnifiedTopology: true }).then(client => {
 
     console.log('Connected correctly to server');
     const db = client.db(dbname);
-
+ 
     dboper.insertDocument(db, { name: "Breadcrumb Trail Campground", description: "Test"},
         'campsites')
         .then(result => {
